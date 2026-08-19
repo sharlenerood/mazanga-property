@@ -55,7 +55,7 @@
             /* ── FRAME ─────────────────────────────────── */
             .frame {
                 width: min(100vw, 1080px);
-                height: min(100vw * 1.25, 1350px);
+                height: min(125vh, 1350px);
                 max-width: 1080px;
                 max-height: 1350px;
                 position: relative;
@@ -142,7 +142,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding: 8% 6% 22% 6%;
+                padding: 9% 6% 16% 6%;
                 text-align: center;
                 transition: transform .48s cubic-bezier(.77,0,.175,1), opacity .48s ease;
                 will-change: transform, opacity;
@@ -173,7 +173,7 @@
                 letter-spacing: .2em;
                 color: rgba(0,0,0,.35);
                 text-transform: uppercase;
-                margin-bottom: 4%;
+                margin-bottom: 1.5%;
                 position: relative;
                 z-index: 2;
             }
@@ -185,7 +185,7 @@
                 color: #1c1c1c;
                 text-transform: uppercase;
                 letter-spacing: .1em;
-                margin-bottom: 5%;
+                margin-bottom: 3.5%;
                 line-height: 1.2;
             }
 
@@ -195,19 +195,19 @@
                 height: clamp(2px, .45vmin, 4px);
                 background: #dd1f26;
                 opacity: .5;
-                margin-bottom: 5%;
+                margin-bottom: 3.5%;
                 border-radius: 2px;
             }
 
             /* ── PROPERTY IMAGE ────────────────────────── */
             .property-img {
-                width: clamp(280px, 58vmin, 680px);
-                height: clamp(210px, 43vmin, 510px);
+                width: clamp(220px, 48vmin, 560px);
+                height: clamp(165px, 36vmin, 420px);
                 border-radius: clamp(8px, 1.8vmin, 20px);
                 object-fit: cover;
                 border: 3px solid rgba(221,31,38,.15);
                 box-shadow: 0 6px 32px rgba(0,0,0,.15);
-                margin-bottom: 6%;
+                margin-bottom: 4%;
             }
 
             /* ── PROPERTY NAME ────────────────────────── */
@@ -216,7 +216,7 @@
                 font-weight: 800;
                 color: #1c1c1c;
                 line-height: 1.3;
-                margin-bottom: 4%;
+                margin-bottom: 3%;
             }
 
             /* ── PROPERTY TYPE PILL ────────────────────── */
@@ -230,7 +230,7 @@
                 text-transform: uppercase;
                 letter-spacing: .12em;
                 border-radius: 100px;
-                margin-bottom: 5%;
+                margin-bottom: 3.5%;
                 white-space: nowrap;
             }
 
@@ -252,7 +252,7 @@
             }
 
             .price-amount {
-                font-size: clamp(42px, 11vmin, 120px);
+                font-size: clamp(36px, 9.5vmin, 104px);
                 font-weight: 900;
                 color: #dd1f26;
                 letter-spacing: -.03em;
@@ -260,7 +260,7 @@
             }
 
             .price-unit {
-                font-size: clamp(15px, 3vmin, 36px);
+                font-size: clamp(13px, 2.6vmin, 30px);
                 font-weight: 700;
                 color: #dd1f26;
                 opacity: .55;
@@ -473,8 +473,36 @@
                 letter-spacing: .08em;
                 color: rgba(0,0,0,.4);
                 text-transform: uppercase;
-                margin-top: 4%;
-                margin-bottom: 5%;
+                margin-top: 2.5%;
+                margin-bottom: 3%;
+            }
+
+            /* ── MOBILE OPTIMIZATION ─────────────────── */
+            @media (max-width: 480px) {
+                .frame {
+                    height: min(130vh, 1350px) !important;
+                }
+
+                .slide {
+                    padding: 8% 5% 15% 5% !important;
+                }
+
+                .property-img {
+                    width: clamp(200px, 52vw, 400px) !important;
+                    height: clamp(150px, 39vw, 300px) !important;
+                }
+
+                .price-amount {
+                    font-size: clamp(32px, 9vw, 72px) !important;
+                }
+
+                .price-unit {
+                    font-size: clamp(11px, 2.4vw, 22px) !important;
+                }
+
+                .credits {
+                    font-size: clamp(7px, 1.3vw, 11px) !important;
+                }
             }
         </style>
     </head>
