@@ -16,10 +16,7 @@
             html, body {
                 width: 100%;
                 background: #dddad5;
-            }
-
-            html {
-                overflow-y: auto;
+                overflow-x: hidden;
             }
 
             body {
@@ -57,8 +54,8 @@
 
             /* ── FRAME ─────────────────────────────────── */
             .frame {
-                width: min(100vw, 80vh, 1080px);
-                height: min(100vw, 100vh, 1350px);
+                width: min(100vw, 1080px);
+                height: min(100vw * 1.25, 1350px);
                 max-width: 1080px;
                 max-height: 1350px;
                 position: relative;
@@ -145,7 +142,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding: 7% 10% 14% 10%;
+                padding: 8% 6% 22% 6%;
                 text-align: center;
                 transition: transform .48s cubic-bezier(.77,0,.175,1), opacity .48s ease;
                 will-change: transform, opacity;
@@ -171,24 +168,24 @@
 
             /* ── REGISTERED LABEL ──────────────────────── */
             .reg-label {
-                font-size: clamp(7px, 1.4vmin, 15px);
+                font-size: clamp(10px, 2.2vmin, 22px);
                 font-weight: 700;
                 letter-spacing: .2em;
                 color: rgba(0,0,0,.35);
                 text-transform: uppercase;
-                margin-bottom: 2.5%;
+                margin-bottom: 4%;
                 position: relative;
                 z-index: 2;
             }
 
             /* ── DATE ──────────────────────────────────── */
             .date {
-                font-size: clamp(13px, 3.4vmin, 38px);
+                font-size: clamp(16px, 4.2vmin, 46px);
                 font-weight: 900;
                 color: #1c1c1c;
                 text-transform: uppercase;
                 letter-spacing: .1em;
-                margin-bottom: 3%;
+                margin-bottom: 5%;
                 line-height: 1.2;
             }
 
@@ -210,16 +207,16 @@
                 object-fit: cover;
                 border: 3px solid rgba(221,31,38,.15);
                 box-shadow: 0 6px 32px rgba(0,0,0,.15);
-                margin-bottom: 3.5%;
+                margin-bottom: 6%;
             }
 
             /* ── PROPERTY NAME ────────────────────────── */
             .property-name {
-                font-size: clamp(14px, 3vmin, 34px);
+                font-size: clamp(17px, 3.8vmin, 42px);
                 font-weight: 800;
                 color: #1c1c1c;
                 line-height: 1.3;
-                margin-bottom: 2%;
+                margin-bottom: 4%;
             }
 
             /* ── PROPERTY TYPE PILL ────────────────────── */
@@ -228,12 +225,12 @@
                 padding: 1.2% 3%;
                 background: rgba(221,31,38,.1);
                 color: #dd1f26;
-                font-size: clamp(8px, 1.5vmin, 16px);
+                font-size: clamp(10px, 2vmin, 20px);
                 font-weight: 700;
                 text-transform: uppercase;
                 letter-spacing: .12em;
                 border-radius: 100px;
-                margin-bottom: 3%;
+                margin-bottom: 5%;
                 white-space: nowrap;
             }
 
@@ -255,7 +252,7 @@
             }
 
             .price-amount {
-                font-size: clamp(36px, 9.5vmin, 104px);
+                font-size: clamp(42px, 11vmin, 120px);
                 font-weight: 900;
                 color: #dd1f26;
                 letter-spacing: -.03em;
@@ -263,7 +260,7 @@
             }
 
             .price-unit {
-                font-size: clamp(13px, 2.6vmin, 30px);
+                font-size: clamp(15px, 3vmin, 36px);
                 font-weight: 700;
                 color: #dd1f26;
                 opacity: .55;
@@ -412,21 +409,21 @@
             }
 
             .corner.tr {
-                top: 8%;
+                top: 13%;
                 right: 4%;
                 border-top: 2px solid #dd1f26;
                 border-right: 2px solid #dd1f26;
             }
 
             .corner.bl {
-                bottom: 8.5%;
+                bottom: 14%;
                 left: 4%;
                 border-bottom: 2px solid #dd1f26;
                 border-left: 2px solid #dd1f26;
             }
 
             .corner.br {
-                bottom: 8.5%;
+                bottom: 14%;
                 right: 4%;
                 border-bottom: 2px solid #dd1f26;
                 border-right: 2px solid #dd1f26;
@@ -451,11 +448,11 @@
                 position: absolute;
                 bottom: 3.5%;
                 left: 4%;
-                font-size: clamp(6px, 1.1vmin, 12px);
+                font-size: clamp(8px, 1.5vmin, 16px);
                 font-weight: 600;
                 letter-spacing: .05em;
                 color: #1c1c1c;
-                line-height: 1.5;
+                line-height: 1.8;
                 z-index: 10;
             }
 
@@ -471,13 +468,13 @@
 
             /* ── HOLDING NUMBER ──────────────────────── */
             .holding {
-                font-size: clamp(7px, 1.4vmin, 15px);
+                font-size: clamp(10px, 1.8vmin, 18px);
                 font-weight: 600;
                 letter-spacing: .08em;
                 color: rgba(0,0,0,.4);
                 text-transform: uppercase;
-                margin-top: 2%;
-                margin-bottom: 2.5%;
+                margin-top: 4%;
+                margin-bottom: 5%;
             }
         </style>
     </head>
@@ -535,7 +532,9 @@
                 </div>
             </div>
             <div class="corner tl"></div>
+            <div class="corner tr"></div>
             <div class="corner bl"></div>
+            <div class="corner br"></div>
             <div class="slides-container" id="slidesContainer"></div>
             <button class="nav prev" id="prevBtn" aria-label="Previous">
                 <svg viewBox="0 0 24 24">
