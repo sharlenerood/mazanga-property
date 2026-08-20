@@ -15,8 +15,9 @@
 
             html, body {
                 width: 100%;
-                background: #dddad5;
+                background: #f8f6f2;
                 overflow-x: hidden;
+                overflow-y: hidden;
             }
 
             body {
@@ -29,9 +30,9 @@
             }
 
             .graphic-headline {
-                padding-top: clamp(10px, 1.5vh, 18px);
+                padding-top: clamp(6px, 1vh, 12px);
                 text-align: center;
-                margin-bottom: clamp(10px, 2vh, 24px);
+                margin-bottom: clamp(6px, 1vh, 14px);
                 width: min(100vw, 100vh, 1080px);
                 max-width: 1080px;
                 padding: 0 4%;
@@ -56,14 +57,14 @@
             /* ── FRAME ─────────────────────────────────── */
             .frame {
                 width: min(100vw, 1080px);
-                height: min(100vw * 1.25, 1350px);
+                height: min(100vw * 1.25, 1080px);
                 max-width: 1080px;
-                max-height: 1350px;
+                max-height: 1080px;
                 position: relative;
                 overflow: hidden;
                 background: #f8f6f2;
                 background-image: linear-gradient(rgba(221,31,38,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(221,31,38,.04) 1px, transparent 1px);
-                background-size: 40px 40px;
+                background-size: 32px 32px;
             }
 
             /* ── TOP ACCENT BAR ────────────────────────── */
@@ -481,7 +482,7 @@
             /* ── MOBILE OPTIMIZATION ─────────────────── */
             @media (max-width: 480px) {
                 .frame {
-                    height: min(100vw * 1.25, 1350px) !important;
+                    height: min(100vw * 1.25, 1080px) !important;
                 }
 
                 .slide {
