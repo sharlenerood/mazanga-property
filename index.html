@@ -735,6 +735,23 @@
             });
 
             updateUI();
+
+            // --- Auto-resize: report actual content height to the parent page ---
+            function reportHeight() {
+                const height = Math.ceil(document.body.getBoundingClientRect().bottom);
+                parent.postMessage({
+                    source: 'mazanga-property',
+                    height: height
+                }, '*');
+            }
+            window.addEventListener('load', reportHeight);
+            window.addEventListener('resize', reportHeight);
+            if (window.ResizeObserver) {
+                new ResizeObserver(reportHeight).observe(document.body);
+            }
+            // fonts/images can resolve a beat late — recheck a few times just in case
+            [100, 400, 1000].forEach(ms => setTimeout(reportHeight, ms));
+            reportHeight();
         </script>
     </body>
 </html>
